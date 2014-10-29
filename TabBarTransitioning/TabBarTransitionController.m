@@ -96,7 +96,7 @@
         [self.tabBarControllerDelegate.interactiveTransition finishInteractiveTransition];
     }
     else{
-        self.tabBarControllerDelegate.interactiveTransition.completionSpeed = ratio > 0 ? ratio : 1;
+        self.tabBarControllerDelegate.interactiveTransition.completionSpeed = ratio > 0 ? ratio : 1; // completionSpeed == 0 might block the UI
         [self.tabBarControllerDelegate.interactiveTransition cancelInteractiveTransition];
     }
     self.tabBarControllerDelegate.interactive = NO;
@@ -105,7 +105,7 @@
 - (void)cancelInteractiveTransitionWithRatio:(CGFloat)ratio
 {
 //    if (self.tabBarControllerDelegate.isAnimating) {
-        self.tabBarControllerDelegate.interactiveTransition.completionSpeed = ratio > 0 ? ratio : 1;
+        self.tabBarControllerDelegate.interactiveTransition.completionSpeed = ratio > 0 ? ratio : 1; // completionSpeed == 0 might block the UI
         [self.tabBarControllerDelegate.interactiveTransition cancelInteractiveTransition];
 //    } else {
 //        [self.tabBarControllerDelegate cancelNextTransitionAfterStart];
