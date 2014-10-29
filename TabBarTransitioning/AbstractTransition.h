@@ -22,7 +22,7 @@ extern NSTimeInterval const kDuration;
 @interface AbstractTransition : NSObject <UIViewControllerAnimatedTransitioning>
 
 @property (assign, nonatomic) BOOL presenting;
-//@property (assign, nonatomic, getter=isAnimating) BOOL animating;
+@property (assign, nonatomic, getter=isAnimating) BOOL animating;
 @property (weak, nonatomic) id<TransitionDelegate> delegate; // Subclass implementation is responsible for sending messages to delegate
 
 //- (void)cancelTransitionAfterStart;

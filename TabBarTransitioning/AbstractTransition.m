@@ -39,16 +39,16 @@ NSTimeInterval const kDuration = 0.3;
 
 - (void)animationEnded:(BOOL)transitionCompleted
 {
-//    self.animating = NO;
+    self.animating = NO;
 //    self.shouldCancelTransitionAfterStart = NO;
     [self.delegate transition:self didComplete:transitionCompleted];
 }
 
 #pragma mark - Private Methods for subclass use
 
-//- (void)animateTransitionDidStart
-//{
-//    self.animating = YES;
-//}
+- (void)animateTransitionDidStart
+{
+    self.animating = YES;
+}
 
 @end

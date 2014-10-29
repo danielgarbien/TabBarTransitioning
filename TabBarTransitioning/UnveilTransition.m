@@ -63,7 +63,7 @@
                          }];
     }
     
-//    [self animateTransitionDidStart];
+    [self animateTransitionDidStart];
 }
 
 @end

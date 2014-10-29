@@ -16,7 +16,7 @@
 @property (strong, nonatomic, readonly) UIPercentDrivenInteractiveTransition * interactiveTransition;
 
 - (instancetype)initWithAnimator:(AbstractTransition *)animator;
-//- (BOOL)isAnimating;
+- (BOOL)isAnimating;
 //- (void)cancelNextTransitionAfterStart;
 
 @end

@@ -20,6 +20,6 @@
  * Call this method from at the end of animateTransition: implementation from within AbstratctTransition subclass.
  * Do not override.
  */
-//- (void)animateTransitionDidStart;
+- (void)animateTransitionDidStart;
 
 @end

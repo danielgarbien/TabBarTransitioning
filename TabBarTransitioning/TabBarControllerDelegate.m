@@ -30,10 +30,10 @@
     return self;
 }
 
-//- (BOOL)isAnimating
-//{
-//    return self.noninteractiveTransition.isAnimating;
-//}
+- (BOOL)isAnimating
+{
+    return self.noninteractiveTransition.isAnimating;
+}
 
 //- (void)cancelNextTransitionAfterStart
 //{
