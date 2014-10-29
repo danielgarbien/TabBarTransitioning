@@ -119,10 +119,10 @@
 {
     CGPoint velocity = [gestureRecognizer velocityInView:gestureRecognizer.view];
     
-//    // accept only horizontal gestures
-//    if (fabs(velocity.x) < fabs(velocity.y)) {
-//        return NO;
-//    }
+    // accept only horizontal gestures
+    if (fabs(velocity.x) < fabs(velocity.y)) {
+        return NO;
+    }
     
     self.userPansRight = velocity.x > 0;
     
