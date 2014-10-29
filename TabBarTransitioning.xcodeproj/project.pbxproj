@@ -15,6 +15,11 @@
 		65670E5D1A0125A000BC37C4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65670E5C1A0125A000BC37C4 /* Images.xcassets */; };
 		65670E601A0125A000BC37C4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65670E5E1A0125A000BC37C4 /* LaunchScreen.xib */; };
 		65670E6C1A0125A000BC37C4 /* TabBarTransitioningTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65670E6B1A0125A000BC37C4 /* TabBarTransitioningTests.m */; };
+		65670E781A012A3300BC37C4 /* TabBarControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65670E771A012A3300BC37C4 /* TabBarControllerDelegate.m */; };
+		65670E7C1A012ADC00BC37C4 /* AbstractTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 65670E7A1A012ADC00BC37C4 /* AbstractTransition.m */; };
+		65670E831A012AEF00BC37C4 /* ScrollTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 65670E7E1A012AEF00BC37C4 /* ScrollTransition.m */; };
+		65670E841A012AEF00BC37C4 /* TabBarTransitionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65670E801A012AEF00BC37C4 /* TabBarTransitionController.m */; };
+		65670E851A012AEF00BC37C4 /* UnveilTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 65670E821A012AEF00BC37C4 /* UnveilTransition.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +48,17 @@
 		65670E651A0125A000BC37C4 /* TabBarTransitioningTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TabBarTransitioningTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		65670E6A1A0125A000BC37C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65670E6B1A0125A000BC37C4 /* TabBarTransitioningTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabBarTransitioningTests.m; sourceTree = "<group>"; };
+		65670E761A012A3300BC37C4 /* TabBarControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarControllerDelegate.h; sourceTree = "<group>"; };
+		65670E771A012A3300BC37C4 /* TabBarControllerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarControllerDelegate.m; sourceTree = "<group>"; };
+		65670E791A012ADC00BC37C4 /* AbstractTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractTransition.h; sourceTree = "<group>"; };
+		65670E7A1A012ADC00BC37C4 /* AbstractTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractTransition.m; sourceTree = "<group>"; };
+		65670E7B1A012ADC00BC37C4 /* AbstractTransition+Subclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AbstractTransition+Subclass.h"; sourceTree = "<group>"; };
+		65670E7D1A012AEF00BC37C4 /* ScrollTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollTransition.h; sourceTree = "<group>"; };
+		65670E7E1A012AEF00BC37C4 /* ScrollTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollTransition.m; sourceTree = "<group>"; };
+		65670E7F1A012AEF00BC37C4 /* TabBarTransitionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarTransitionController.h; sourceTree = "<group>"; };
+		65670E801A012AEF00BC37C4 /* TabBarTransitionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarTransitionController.m; sourceTree = "<group>"; };
+		65670E811A012AEF00BC37C4 /* UnveilTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnveilTransition.h; sourceTree = "<group>"; };
+		65670E821A012AEF00BC37C4 /* UnveilTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnveilTransition.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +100,7 @@
 		65670E4B1A0125A000BC37C4 /* TabBarTransitioning */ = {
 			isa = PBXGroup;
 			children = (
+				65670E751A01297C00BC37C4 /* Transitions */,
 				65670E501A0125A000BC37C4 /* AppDelegate.h */,
 				65670E511A0125A000BC37C4 /* AppDelegate.m */,
 				65670E531A0125A000BC37C4 /* FirstViewController.h */,
@@ -122,6 +139,24 @@
 				65670E6A1A0125A000BC37C4 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		65670E751A01297C00BC37C4 /* Transitions */ = {
+			isa = PBXGroup;
+			children = (
+				65670E761A012A3300BC37C4 /* TabBarControllerDelegate.h */,
+				65670E771A012A3300BC37C4 /* TabBarControllerDelegate.m */,
+				65670E7F1A012AEF00BC37C4 /* TabBarTransitionController.h */,
+				65670E801A012AEF00BC37C4 /* TabBarTransitionController.m */,
+				65670E791A012ADC00BC37C4 /* AbstractTransition.h */,
+				65670E7A1A012ADC00BC37C4 /* AbstractTransition.m */,
+				65670E7B1A012ADC00BC37C4 /* AbstractTransition+Subclass.h */,
+				65670E7D1A012AEF00BC37C4 /* ScrollTransition.h */,
+				65670E7E1A012AEF00BC37C4 /* ScrollTransition.m */,
+				65670E811A012AEF00BC37C4 /* UnveilTransition.h */,
+				65670E821A012AEF00BC37C4 /* UnveilTransition.m */,
+			);
+			name = Transitions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,10 +259,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65670E851A012AEF00BC37C4 /* UnveilTransition.m in Sources */,
+				65670E781A012A3300BC37C4 /* TabBarControllerDelegate.m in Sources */,
 				65670E581A0125A000BC37C4 /* SecondViewController.m in Sources */,
+				65670E841A012AEF00BC37C4 /* TabBarTransitionController.m in Sources */,
+				65670E7C1A012ADC00BC37C4 /* AbstractTransition.m in Sources */,
 				65670E521A0125A000BC37C4 /* AppDelegate.m in Sources */,
 				65670E551A0125A000BC37C4 /* FirstViewController.m in Sources */,
 				65670E4F1A0125A000BC37C4 /* main.m in Sources */,
+				65670E831A012AEF00BC37C4 /* ScrollTransition.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
