@@ -60,6 +60,11 @@
     return self.noninteractiveTransition;
 }
 
+- (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController
+{
+    return self.noninteractiveTransition.isAnimating == NO;
+}
+
 #pragma mark - Private Properties
 
 - (UIPercentDrivenInteractiveTransition *)interactiveTransition
