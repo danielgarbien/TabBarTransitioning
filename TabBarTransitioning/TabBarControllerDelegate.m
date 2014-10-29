@@ -13,7 +13,7 @@
 @interface TabBarControllerDelegate ()
 
 @property (strong, nonatomic, readwrite) UIPercentDrivenInteractiveTransition * interactiveTransition;
-@property (strong, nonatomic) AbstractTransition * noninteractiveTransition;
+@property (strong, nonatomic, readwrite) AbstractTransition * noninteractiveTransition;
 
 @end
 

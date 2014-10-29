@@ -14,6 +14,7 @@
 
 @property (assign, nonatomic) BOOL interactive;
 @property (strong, nonatomic, readonly) UIPercentDrivenInteractiveTransition * interactiveTransition;
+@property (strong, nonatomic, readonly) AbstractTransition * noninteractiveTransition;
 
 - (instancetype)initWithAnimator:(AbstractTransition *)animator;
 - (BOOL)isAnimating;

@@ -9,10 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "TabBarTransitionController.h"
 #import "TabBarControllerDelegate.h"
-//#import "UITabBarController+SafeIndexSelection.h"
+#import "AbstractTransition.h"
+#import "UITabBarController+SafeIndexSelection.h"
 
 
-@interface TabBarTransitionController () <UIGestureRecognizerDelegate>
+@interface TabBarTransitionController () <UIGestureRecognizerDelegate, TransitionDelegate>
 
 @property (weak, nonatomic) TabBarControllerDelegate * tabBarControllerDelegate;
 @property (weak, nonatomic) UITabBarController * tabBarController;
@@ -33,6 +34,7 @@
         
         _tabBarController = tabBarController;
         _tabBarControllerDelegate = tabBarControllerDelegate;
+        _tabBarControllerDelegate.noninteractiveTransition.delegate = self;
         
         _panGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self
                                                                         action:@selector(userDidPan:)];
@@ -58,8 +60,7 @@
         newSelectedIndex += self.userPansRight ? -1 : +1;
         
         self.tabBarControllerDelegate.interactive = YES;
-//        [self.tabBarController beginSelectingIndexSafely:newSelectedIndex];
-        self.tabBarController.selectedIndex = newSelectedIndex;
+        [self.tabBarController beginSelectingIndexSafely:newSelectedIndex];
         return;
     }
     
@@ -111,6 +112,13 @@
 //        [self.tabBarControllerDelegate cancelNextTransitionAfterStart];
 //    }
     self.tabBarControllerDelegate.interactive = NO;
+}
+
+#pragma mark - TransitionDelegate
+
+- (void)transition:(AbstractTransition *)transition didComplete:(BOOL)didComplete
+{
+    [self.tabBarController endSelectingSafely];
 }
 
 #pragma mark - UIGestureRecognizerDelegate
