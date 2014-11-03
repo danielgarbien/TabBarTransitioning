@@ -13,7 +13,7 @@
 
 @interface AppDelegate ()
 
-@property (weak, nonatomic) UITabBarController * tabBarController;
+@property (weak, nonatomic, readonly) UITabBarController * tabBarController;
 @property (strong, nonatomic) TabBarTransitionController * tabBarTransitionController;
 @property (strong, nonatomic) TabBarControllerDelegate * tabBarControllerDelegate;
 
