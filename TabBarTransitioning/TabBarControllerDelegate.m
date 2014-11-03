@@ -35,10 +35,10 @@
     return self.noninteractiveTransition.isAnimating;
 }
 
-//- (void)cancelNextTransitionAfterStart
-//{
-//    [self.noninteractiveTransition cancelTransitionAfterStart];
-//}
+- (void)cancelNextTransitionAfterStart
+{
+    [self.noninteractiveTransition cancelTransitionAfterStart];
+}
 
 #pragma mark - UITabBarControllerDelegate
 

@@ -13,10 +13,10 @@
 
 - (void)animateTransition:(id <UIViewControllerContextTransitioning>)transitionContext
 {
-//    if (self.shouldCancelTransitionAfterStart) {
-//        [transitionContext completeTransition:NO];
-//        return;
-//    }
+    if (self.shouldCancelTransitionAfterStart) {
+        [transitionContext completeTransition:NO];
+        return;
+    }
 
     UIViewController *fromViewController = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
     UIViewController *toViewController = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];

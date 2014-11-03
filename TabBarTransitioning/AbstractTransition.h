@@ -25,6 +25,6 @@ extern NSTimeInterval const kDuration;
 @property (assign, nonatomic, getter=isAnimating) BOOL animating;
 @property (weak, nonatomic) id<TransitionDelegate> delegate; // Subclass implementation is responsible for sending messages to delegate
 
-//- (void)cancelTransitionAfterStart;
+- (void)cancelTransitionAfterStart;
 
 @end

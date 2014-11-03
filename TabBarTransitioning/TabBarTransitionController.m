@@ -80,12 +80,12 @@
     }
     
     if (sender.state == UIGestureRecognizerStateEnded) {
-//        if (self.tabBarControllerDelegate.isAnimating) {
+        if (self.tabBarControllerDelegate.isAnimating) {
             [self completeInteractiveTransitionWithVelocity:velocity ratio:ratio];
-//        } else {
-//            [self.tabBarControllerDelegate cancelNextTransitionAfterStart];
-//            self.tabBarControllerDelegate.interactive = NO;
-//        }
+        } else {
+            [self.tabBarControllerDelegate cancelNextTransitionAfterStart];
+            self.tabBarControllerDelegate.interactive = NO;
+        }
     }
 }
 
@@ -105,12 +105,12 @@
 
 - (void)cancelInteractiveTransitionWithRatio:(CGFloat)ratio
 {
-//    if (self.tabBarControllerDelegate.isAnimating) {
+    if (self.tabBarControllerDelegate.isAnimating) {
         self.tabBarControllerDelegate.interactiveTransition.completionSpeed = ratio > 0 ? ratio : 1; // completionSpeed == 0 might block the UI
         [self.tabBarControllerDelegate.interactiveTransition cancelInteractiveTransition];
-//    } else {
-//        [self.tabBarControllerDelegate cancelNextTransitionAfterStart];
-//    }
+    } else {
+        [self.tabBarControllerDelegate cancelNextTransitionAfterStart];
+    }
     self.tabBarControllerDelegate.interactive = NO;
 }
 

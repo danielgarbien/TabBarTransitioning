@@ -18,6 +18,6 @@
 
 - (instancetype)initWithAnimator:(AbstractTransition *)animator;
 - (BOOL)isAnimating;
-//- (void)cancelNextTransitionAfterStart;
+- (void)cancelNextTransitionAfterStart;
 
 @end
